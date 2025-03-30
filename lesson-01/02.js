@@ -6,11 +6,10 @@
 */
 
 // your code
-let factorial
+let factorial = 10;
 let i = 1;
 
-while (i <= 10) {
-  factorial = i;
-  i++;
+while (factorial) {
+  i *= (n--);
 }
-console.log("Факториал 10: " + factorial);
+console.log("Факториал 10: " + i);
