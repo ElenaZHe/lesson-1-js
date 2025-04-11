@@ -13,6 +13,6 @@ const isVerifiedUser = true
 const hasSpecialPermission = true
 const hasTemporaryPass = false
 
-let isAccess
+let isAccess = (isAdmin || isVerifiedUser) && (hasSpecialPermission || hasTemporaryPass) //(isAdmin || isVerifiedUser) проверяет, является ли пользователь администратором или подтвержденным пользователем.(hasSpecialPermission || hasTemporaryPass) проверяет наличие специального разрешения или временного пропуска.
 
 // your code

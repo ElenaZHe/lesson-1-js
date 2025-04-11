@@ -7,9 +7,9 @@
 * Для успешного прохождения тестов не меняйте названия переменных!
 */
 
-let dice1 // your code
-let dice2 // your code
-let isWinningDouble // your code
+let dice1 = Math.floor(Math.random() * 6) + 1; // Math.floor - откугляет число до целого, 
+let dice2 = Math.floor(Math.random() * 6) + 1; // Math.random() * 6 дает случайное число, +1 смещает диапазон
+let isWinningDouble = (dice1 === dice2) && (dice1 > 3); // dice1 === dice2 - проверка на дубль, dice1 > 3 проверка что число больше 3
 
 /*
 console.log('Первый бросок: ' + dice1)
