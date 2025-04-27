@@ -15,4 +15,15 @@
 Подсказка: можно использовать функцию `includesElement`, которую мы написали ранее. Переписывать её не нужно, она доступна по всему проекту за счёт hoisting.
 */
 
-function findUniqueElements() {}
+function findUniqueElements(array) {
+    const uniqueElements = [];  //новый массив, в который у нас будет заноситься уникальные числа
+
+    for (let i = 0; i<array.length; i++) {
+        const element = array[i];
+        if (!includesElement(uniqueElements, element)) { //проверяет, есть ли currentElement в массиве uniqueElements
+            uniqueElements.push(element); //Добавляем в новый массив, только если элемента ещё нет в нем
+        }
+    }
+    return uniqueElements;
+}
+
