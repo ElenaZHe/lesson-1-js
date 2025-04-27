@@ -18,6 +18,6 @@ function includesElement(array, element) {
         if (array[i] == element) {
             return true;
         }
-        return false;
     }
+    return false;
 }
