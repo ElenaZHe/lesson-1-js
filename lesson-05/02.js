@@ -35,4 +35,16 @@ const gallery = {
   'The Scream': 'Edvard Munch',
 }
 
-function updateGallery() {}
+function updateGallery(gallery, art, newValue) {
+  if (typeof gallery !== 'object' || gallery === null) {
+    console.error('Первый параметр должен быть объектом');
+    return;
+  }
+  
+  if (typeof art !== 'string') {
+    console.error('Название произведения должно быть строкой');
+    return;
+  }
+  gallery[art] = newValue;
+}
+

@@ -15,5 +15,21 @@ const game = {
     gold: 250,
     lumber: 100,
   },
-  addResource() {}
-}
+  
+  addResource(resource, amount) {
+    // Проверяем, существует ли указанный ресурс
+    if (!this.resources.hasOwnProperty(resource)) {
+      console.log("Invalid resource");
+      return;
+    }
+    
+    // Проверяем, что amount - число (и не NaN)
+    if (typeof amount !== 'number' || isNaN(amount)) {
+      console.log("Amount must be a valid number");
+      return;
+    }
+    
+    // Добавляем указанное количество ресурса
+    this.resources[resource] += amount;
+  }
+};
