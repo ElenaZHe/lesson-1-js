@@ -5,6 +5,13 @@
 
 function isNumeric(str) {
   // your code
+  return !isNaN(parseFloat(str)) && isFinite(str);
+
+  /*parseFloat(str) -преобразует число в строку
+  * !isNaN() - проверяет значения на NaN, (!) отрицание, что строка значение не число
+  * isFinite(str) - проверяет, является ли значение конечным числом
+  */ 
+
 }
 
 // console.log(isNumeric("123")) // Ожидаемый результат: true
