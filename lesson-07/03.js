@@ -11,7 +11,7 @@
 
 function truncate(str, maxLength) {
   // your code
-  if(str>maxLength){ // проверка на длинну символов
+  if(str.length>maxLength){ // проверка на длинну символов
     return str.slice(0, maxLength) + "..."; // если у нас строка больше длины, то обрезаем ее
   }else{
     return str;  // если меньше возвращаем полную строку
