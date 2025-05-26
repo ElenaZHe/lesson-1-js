@@ -34,10 +34,31 @@ let timerId
 
 startButton.addEventListener('click', () => {
   let counter = 3
-
   // your code
+
+  if (isTimerStarted) return // запуск контейнера
+  
+  isTimerStarted = true
+  countdownDisplay.textContent = counter
+  
+  timerId = setInterval(() => { // окончание счета
+    counter--
+    
+    if (counter > 0) {
+      countdownDisplay.textContent = counter
+    } else {
+      clearInterval(timerId)
+      countdownDisplay.textContent = '🚀'
+      isTimerStarted = false
+    }
+  }, 1000)
 })
 
 cancelButton.addEventListener('click', () => {
   // your code
+  if(isTimerStarted) { // передаем параметр старта счетчика
+    clearInterval(timerId) //остановка счетчика через заданное время
+    countdownDisplay.textContent = "Отменено";
+    isTimerStarted = false
+  }
 })
